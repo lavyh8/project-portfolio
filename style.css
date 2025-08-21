@@ -1,0 +1,261 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+.nav{
+    background-color: #181818;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: 20px;
+}
+
+.nav-list a{
+    text-decoration: none;
+    color: #ddd;
+    padding: 20px;
+}
+
+.nav-list a:hover{
+    color: #FFFFFF;
+}
+/* HEADER */
+
+/* MAIN */
+.main{
+    width: 100%;
+    background-color: #000;
+    height: calc(100vh - 80px);
+    background-image: url(images/programador.png);
+
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.main h1{
+    color: #FFFFFF;
+    font-size: 54px;
+}
+
+.main p{
+    font-size: 24px;
+    font-style: italic;
+    color: #936639;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+.button{
+    cursor: pointer;
+    background-color: #ddd;
+    border: 0;
+    padding: 8px 12px 8px 12px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.9s;
+}
+
+.main a{
+    text-decoration: none;
+    color: #181818;
+}
+
+.button:hover{
+    background-color: #FFFFFF;
+    transform: scale(1.1);
+}
+/* MAIN */
+
+/* SOBRE */
+.about{
+    background-color: #FFFF;
+    width: 100%;
+    padding: 80px 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about div{
+    max-width: 50%;
+    padding-right: 40px;
+}
+
+.about img{
+    max-width: 450px;
+    border-radius: 360px;
+}
+
+.about div h2{
+    font-size: 32px;
+    margin-bottom: 14px;
+    color: #582f0e;
+}
+/* SOBRE */
+
+/* PROJETOS */
+.projects{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+}
+
+.projects h2{
+    font-size: 32px;
+    margin-bottom: 8px;
+    margin-top: 20px;
+    color: #582f0e;
+}
+
+.projects p{
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.projects-list{
+    width: 100%;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects img{
+    width: 22%;
+    margin: 1% 1% 1% 1%;
+    border-radius: 8px;
+    opacity: 0.8;
+    transition: 0.9s;
+}
+
+.projects img:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.action{
+    background-color: #582f0e;
+    border: 0;
+    padding: 8px 24px;
+    border-radius: 18px;
+    color: #FFFFFF;
+    margin-top: 18px;
+    cursor: pointer;
+    transition: 0.9s;
+}
+
+.action:hover{
+    transform: scale(1.1);
+}
+/* PROJETOS */
+
+/* RODAPE */
+footer{
+    width: 100%;
+    background-color: #181818;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFF;
+}
+
+footer a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+footer p{
+    margin-left: 6px;
+}
+/* RODAPE */
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1050px){
+    /* MAIN */
+    .main h1{
+        font-size: 45px;
+    }
+
+    .main p{
+        font-size: 18px;
+    }
+
+    .main{
+        background-size: cover;
+    }
+    /* MAIN */
+
+    /* SOBRE */
+    .about{
+        flex-direction: column;
+        padding-top: 80px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+    }
+
+    .about div{
+        max-width: 80%;
+    }
+
+    .about div h2{
+        font-size: 45px;
+    }
+
+    .about img{
+        width: 80%;
+        margin-top: 40px;
+    }
+    /* SOBRE */
+
+    /* PROJETOS */
+    .projects img{
+        width: 27.5%;
+    }
+    /* PROJETOS */
+
+    /* RODAPE */
+    footer{
+        flex-direction: column;
+    }
+
+    footer p {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    footer h3{
+        font-size: 16px;
+    }
+    /* RODAPE */
+}
